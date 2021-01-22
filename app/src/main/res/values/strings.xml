@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">study06_ksj</string>
+    <!--    STEP 1 string-->
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <!--    STEP 2 string-->
+    <string name="starbucs">starbucs logo</string>
+    <string name="details_button">Show details</string>
+    <string-array name="options">
+        <item>Drinks</item>
+        <item>Food</item>
+        <item>Stores</item>
+    </string-array>
+    <!--    STEP 3 string-->
+    <string name="workout_title">Title</string>
+    <string name="workout_description">Description</string>
+    <!--    STEP 4 string-->
+    <string name="title_top">Top fragment</string>
+    <string-array name="pizzas">
+        <item>Diavolo</item>
+        <item>Funghi</item>
+    </string-array>
+    <string-array name="pasta">
+        <item>Spaghetti bolognese</item>
+        <item>Lasagne</item>
+    </string-array>
+    <string-array name="stores">
+        <item>Cambridge</item>
+        <item>Sebastopol</item>
+    </string-array>
+    <string name="create_order">Create Order</string>
+
+</resources>
