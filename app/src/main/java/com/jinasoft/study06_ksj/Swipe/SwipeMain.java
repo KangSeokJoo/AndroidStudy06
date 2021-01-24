@@ -2,21 +2,27 @@ package com.jinasoft.study06_ksj.Swipe;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ShareActionProvider;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ShareActionProvider;
-import android.widget.Toolbar;
 
+import com.google.android.material.tabs.TabLayout;
 import com.jinasoft.study06_ksj.R;
+
 
 public class SwipeMain extends AppCompatActivity {
 
@@ -26,24 +32,42 @@ public class SwipeMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_swipe_main);
-        androidx.appcompat.widget.Toolbar toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         //섹션페이퍼 어댑터 뷰페이퍼에 연결
         SectionsPaperAdapter pagerAdapter = new SectionsPaperAdapter(getSupportFragmentManager());
         ViewPager pager = (ViewPager)findViewById(R.id.paper);
         pager.setAdapter(pagerAdapter); // 뷰페이퍼에 연결
+
+        //ViewPager를 TabLayout에 연결
+        TabLayout tabLayout = (TabLayout)findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(pager);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem menuItem = menu.findItem(R.id.action_share);
+        shareActionProvider = (androidx.appcompat.widget.ShareActionProvider)MenuItemCompat.getActionProvider(menuItem);
+        setShareActionIntent("원하는 피자?");
         return super.onCreateOptionsMenu(menu);
+    }
+
+    private void setShareActionIntent(String text) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, text);
+        shareActionProvider.setShareIntent(intent);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
+            case R.id.action_create_order :
+                Intent intent = new Intent(this, OrderActivity.class);
+                startActivity(intent);
+                return  true;
             default:return super.onOptionsItemSelected(item);
         }
     }
@@ -58,10 +82,17 @@ public class SwipeMain extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment getItem(int position) { // 각 페이지에 표시할 프래그먼트를 지정
-            switch (position){
+            switch (position) {
                 case 0:
-                    return new TopFragment(); // 메인에 표시한 다음
+                    return new TopFragment();
+                case 1:
+                    return new PizzaFragment();
+                case 2:
+                    return new PastaFragment();
+                case 3:
+                    return new StoresFragment();
             }
+            return null;
         }
 
         @Override
@@ -70,4 +101,17 @@ public class SwipeMain extends AppCompatActivity {
         }
     }
 
+
+    public CharSequence getPageTitle(int position){
+        switch (position){
+            case 0:
+                return getResources().getText(R.string.home_tab);
+            case 1:
+                return getResources().getText(R.string.pizza_tab);
+            case 2:
+                return getResources().getText(R.string.pasta_tab);
+            case 3:
+                return getResources().getText(R.string.store_tab);
+        }return null;
+    }
 }

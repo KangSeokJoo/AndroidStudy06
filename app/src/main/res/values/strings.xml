@@ -30,5 +30,18 @@
         <item>Sebastopol</item>
     </string-array>
     <string name="create_order">Create Order</string>
+    <string name="action_share">Share</string>
+    <string name="home_tab">Home</string>
+    <string name="pizza_tab">Pizzas</string>
+    <string name="pasta_tab">Pasta</string>
+    <string name="store_tab">Stores</string>
+
+    <string name="company_name">Bits and Pizzas</string>
+    <string name="restaurant_image">Restaurant image</string>
+    <string name="home_text">본문내용 아무내용이나 집어넣는 부분인거 같은데 이부분은 너무 많은 영문 있으니 아무말이나 적어야겠음
+    이거 너무 노가다 작업 아닌가 싶을 정도로 뭐 2017년도에 지들이 만들었고 피자맛이 어떻고 아메리카에서 제일 잘나가는 이탈리아
+    피집이라고 하네요</string>
+    <string name="order_name_hint">이름을 입력</string>
+    <string name="order_details_hints">주문을 입력</string>
 
 </resources>

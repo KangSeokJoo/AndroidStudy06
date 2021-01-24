@@ -10,8 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
         <activity android:name=".Swipe.OrderActivity"
-            android:label="@string/create_order"></activity>
-        <activity android:name=".Swipe.SwipeMain" />
+            android:label="@string/create_order"
+            android:parentActivityName=".Swipe.SwipeMain"
+            android:theme="@style/AppTheme">
+
+<!--            API 16 이하 -->
+<!--            <meta-data-->
+<!--                android:name="android.support.PARENT_ACTIVITY"-->
+<!--                android:value=".Swipe.SwipeMain"/>-->
+        </activity>
+        <activity android:name=".Swipe.SwipeMain"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".Fragment.DetailActivity" />
         <activity android:name=".Fragment.FragMain" />
         <activity android:name=".ListView.DrinkActivity" />

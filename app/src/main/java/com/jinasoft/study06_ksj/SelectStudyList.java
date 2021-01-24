@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.jinasoft.study06_ksj.Fragment.FragMain;
 import com.jinasoft.study06_ksj.ListView.ListViewDrinkMain;
 import com.jinasoft.study06_ksj.StopWatch.StopWatchMain;
+import com.jinasoft.study06_ksj.Swipe.SwipeMain;
 
 
 public class SelectStudyList extends AppCompatActivity {
@@ -37,9 +38,10 @@ public class SelectStudyList extends AppCompatActivity {
         String str1 = "STEP1 : 스톱워치 및 쓰레드 백그라운드 \n";
         String str2 = "STEP2 : 리스트 뷰 + 어댑터 사용 \n";
         String str3 = "STEP3 : 프래그먼트";
+        String str4 = "STEP4 : 디자인 + 탭 타이틀 + 스와이프 + 스크롤";
 
         btn0.setOnClickListener(view -> {
-            tv.setText(str1 + str2+str3);
+            tv.setText(str1 + str2+str3+str4);
         });
 
         btn1.setOnClickListener(view -> {
@@ -57,11 +59,11 @@ public class SelectStudyList extends AppCompatActivity {
             Intent intent = new Intent(this, FragMain.class);
             startActivity(intent);
         });
-//        btn4.setOnClickListener(view -> {
-//            Log.d("btn4_btn", "활성");
-//            Intent intent = new Intent(com.jinasoft.study06_ksj.SelectStudyList.this, ToolBarMain.class);
-//            startActivity(intent);
-//        });
+        btn4.setOnClickListener(view -> {
+            Log.d("btn4_btn", "활성");
+            Intent intent = new Intent(this, SwipeMain.class);
+            startActivity(intent);
+        });
 //        btn5.setOnClickListener(view -> {
 //            Log.d("btn5_btn", "활성");
 //            Intent intent = new Intent(com.jinasoft.study06_ksj.SelectStudyList.this, RecyclerViewMain.class);
