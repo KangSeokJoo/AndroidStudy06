@@ -43,5 +43,13 @@
     피집이라고 하네요</string>
     <string name="order_name_hint">이름을 입력</string>
     <string name="order_details_hints">주문을 입력</string>
+    <string name="favorite">Favorite</string>
+
+    <!--    Step 5 string-->
+    <string name="question">웃긴썰 있어요 ?</string>
+    <string name="response">지금!</string>
+    <string name="app_name1">주행계</string>
+    <string name="permission_denied">주소 권한 요청</string>
+
 
 </resources>

@@ -8,8 +8,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.jinasoft.study06_ksj.Bind.BindMain;
 import com.jinasoft.study06_ksj.Fragment.FragMain;
 import com.jinasoft.study06_ksj.ListView.ListViewDrinkMain;
+import com.jinasoft.study06_ksj.Service.ServiceMain;
 import com.jinasoft.study06_ksj.StopWatch.StopWatchMain;
 import com.jinasoft.study06_ksj.Swipe.SwipeMain;
 
@@ -29,19 +31,21 @@ public class SelectStudyList extends AppCompatActivity {
         Button btn4 = (Button) findViewById(R.id.Selcet_Step4BTN);
         Button btn5 = (Button) findViewById(R.id.Selcet_Step5BTN);
         Button btn6 = (Button) findViewById(R.id.Selcet_Step6BTN);
-        Button btn7 = (Button) findViewById(R.id.Selcet_Step7BTN);
-        Button btn8 = (Button) findViewById(R.id.Selcet_Step8BTN);
-        Button btn9 = (Button) findViewById(R.id.Selcet_Step9BTN);
-//
+//        Button btn7 = (Button) findViewById(R.id.Selcet_Step7BTN);
+//        Button btn8 = (Button) findViewById(R.id.Selcet_Step8BTN);
+//        Button btn9 = (Button) findViewById(R.id.Selcet_Step9BTN);
+////
         TextView tv = (TextView)findViewById(R.id.Selcet_HintTV);
 
         String str1 = "STEP1 : 스톱워치 및 쓰레드 백그라운드 \n";
         String str2 = "STEP2 : 리스트 뷰 + 어댑터 사용 \n";
-        String str3 = "STEP3 : 프래그먼트";
-        String str4 = "STEP4 : 디자인 + 탭 타이틀 + 스와이프 + 스크롤";
+        String str3 = "STEP3 : 프래그먼트\n";
+        String str4 = "STEP4 : 디자인 + 탭 타이틀 + 스와이프 + 스크롤\n";
+        String str5 = "STEP5 : 서비스 생명주기 및 알림 10초대기\n";
+        String str6 = "STEP6 : 바운드 서비스 다른 컴포넌트와 연결\n";
 
         btn0.setOnClickListener(view -> {
-            tv.setText(str1 + str2+str3+str4);
+            tv.setText(str1 + str2+str3+str4+str5+str6);
         });
 
         btn1.setOnClickListener(view -> {
@@ -64,16 +68,16 @@ public class SelectStudyList extends AppCompatActivity {
             Intent intent = new Intent(this, SwipeMain.class);
             startActivity(intent);
         });
-//        btn5.setOnClickListener(view -> {
-//            Log.d("btn5_btn", "활성");
-//            Intent intent = new Intent(com.jinasoft.study06_ksj.SelectStudyList.this, RecyclerViewMain.class);
-//            startActivity(intent);
-//        });
-//        btn6.setOnClickListener(view -> {
-//            Log.d("btn6_btn", "활성");
-//            Intent intent = new Intent(com.jinasoft.study06_ksj.SelectStudyList.this, SwipeRefreshMain.class);
-//            startActivity(intent);
-//        });
+        btn5.setOnClickListener(view -> {
+            Log.d("btn5_btn", "활성");
+            Intent intent = new Intent(com.jinasoft.study06_ksj.SelectStudyList.this, ServiceMain.class);
+            startActivity(intent);
+        });
+        btn6.setOnClickListener(view -> {
+            Log.d("btn6_btn", "활성");
+            Intent intent = new Intent(com.jinasoft.study06_ksj.SelectStudyList.this, BindMain.class);
+            startActivity(intent);
+        });
 //        btn7.setOnClickListener(view -> {
 //            Log.d("btn7_btn", "활성");
 //            Intent intent = new Intent(com.jinasoft.study06_ksj.SelectStudyList.this, SideMain.class);

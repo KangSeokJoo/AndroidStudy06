@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jinasoft.study06_ksj">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,18 +13,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
-        <activity android:name=".Swipe.OrderActivity"
+        <activity android:name=".Bind.BindMain"></activity>
+
+        <service
+            android:name=".Bind.OdometerService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+        <activity android:name=".Service.ServiceMain" />
+
+        <service
+            android:name=".Service.ServiceIntentMain"
+            android:exported="false" />
+
+        <activity
+            android:name=".Swipe.OrderActivity"
             android:label="@string/create_order"
             android:parentActivityName=".Swipe.SwipeMain"
             android:theme="@style/AppTheme">
 
-<!--            API 16 이하 -->
-<!--            <meta-data-->
-<!--                android:name="android.support.PARENT_ACTIVITY"-->
-<!--                android:value=".Swipe.SwipeMain"/>-->
+            <!-- API 16 이하 -->
+            <!-- <meta-data -->
+            <!-- android:name="android.support.PARENT_ACTIVITY" -->
+            <!-- android:value=".Swipe.SwipeMain"/> -->
         </activity>
-        <activity android:name=".Swipe.SwipeMain"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Swipe.SwipeMain"
+            android:theme="@style/AppTheme" />
         <activity android:name=".Fragment.DetailActivity" />
         <activity android:name=".Fragment.FragMain" />
         <activity android:name=".ListView.DrinkActivity" />

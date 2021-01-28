@@ -81,42 +81,42 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Selcet_LL2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:id="@+id/Selcet_LL3">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintVertical_bias="0"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/Selcet_LL2"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:id="@+id/Selcet_LL3">-->
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Selcet_Step7BTN"
-            android:text="Step 7"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"/>
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/Selcet_Step7BTN"-->
+<!--            android:text="Step 7"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_weight="1"/>-->
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Selcet_Step8BTN"
-            android:text="Step 8"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Selcet_Step9BTN"
-            android:text="Step 9"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"/>
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/Selcet_Step8BTN"-->
+<!--            android:text="Step 8"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/Selcet_Step9BTN"-->
+<!--            android:text="Step 9"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_weight="1"/>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
     <TextView
         android:layout_width="match_parent"
