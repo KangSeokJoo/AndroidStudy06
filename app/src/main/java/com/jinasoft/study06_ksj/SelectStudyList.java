@@ -45,7 +45,7 @@ public class SelectStudyList extends AppCompatActivity {
         String str6 = "STEP6 : 바운드 서비스 다른 컴포넌트와 연결\n";
 
         btn0.setOnClickListener(view -> {
-            tv.setText(str1 + str2+str3+str4+str5+str6);
+            tv.setText(str1 + str2+str3+str4+str5+str6 +" 스탭 5~6 은 서비스 문제인데 둘다 버전때문에 호환이 잘 안됨 다시 해볼예정");
         });
 
         btn1.setOnClickListener(view -> {
